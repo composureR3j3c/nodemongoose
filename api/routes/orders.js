@@ -93,7 +93,7 @@ router.post("/", (req, res, next) => {
         })
         .catch((err) => {
           console.log(err);
-          res.status(500).json(err);
+          res.status(500).json({error:err});
         });
     })
     .catch((err) => res.status(500).json({message:"Product not found!",error:err}));
